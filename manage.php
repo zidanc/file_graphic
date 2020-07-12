@@ -16,15 +16,25 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>檔案管理功能</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        body{
+            margin:0;
+            box-sizing: border-box;
+            padding: 10px;
+        }
+    </style>
 </head>
 <body>
 <h1 class="header">檔案管理練習</h1>
 <!----建立上傳檔案表單及相關的檔案資訊存入資料表機制----->
 
-
-
-
-
+<form action="save_file.php" method="post" enctype="multipart/data-form">
+    <input type="file" name="pp" id=""><br>
+    <br>
+    <input type="text" name="desc" id=""><br>
+    <br>
+    <input type="submit" value="送出">
+</form>
 <!----透過資料表來顯示檔案的資訊，並可對檔案執行更新或刪除的工作----->
 
 

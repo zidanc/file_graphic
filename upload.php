@@ -27,9 +27,22 @@
 </form>
 
 
-
-
 <!----建立一個連結來查看上傳後的圖檔---->  
+<!-- 本php檔案內透過<form action="B.php">送出到B.php，B.php執行完上傳動作後，將檔案路徑傳回給本php檔案。 -->
+
+<?php
+if(!empty($_GET['filepath'])){
+    $name=$_GET['filepath'];
+?>    
+
+<img src="img/<?=$name;?>" style="width:200px;">        <!-- 此方式才安全，判斷非空值，才會顯示此圖；並且網址若刻意打uploaded/img/，也不會讓別人看到任何圖片了。-->
+
+<?php
+}   
+// }else{
+    // $name="";            這種方式不安全，因為如果上傳空名稱過來，到時候圖像就會連結到img/這一層，等於所有圖片都敞開給別人下載了。
+// }
+?>
 
 
 </body>
