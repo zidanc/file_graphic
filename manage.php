@@ -59,7 +59,7 @@ include_once "base.php";
 <!----透過資料表來顯示檔案的資訊，並可對檔案執行更新或刪除的工作----->
 <p style="padding:1rem 0rem 0.2rem 0rem;">由第一筆my_motto可以看出，圖片檔的資訊是進資料庫(Database MySQL)。</p>
 <p style="padding:0.2rem 0rem 1rem 0rem;">雖然type當時寫入錯誤，但因為圖片檔img不是存入資料庫，是移到本機(Web Server Apache)的img/空間(<img src="">路徑正確)，所以仍可以正常顯示。</p>
-<p style="padding:0.2rem 0rem 1rem 0rem;">找出資料表的資料將其刪除，並且同時也要找出硬碟裡該筆資料的檔案將之刪除，否則檔案會累積到把硬碟塞爆。</p>
+<p style="padding:0.2rem 0rem 1rem 0rem;">找出資料表的資料將其刪除，並且同時也要找出硬碟裡該筆資料的檔案將之刪除，否則圖檔會累積越來越多到把硬碟塞爆。</p>
 <table>
     <tr>
         <th>預覽</th>
@@ -82,8 +82,8 @@ foreach ($all as $key => $value){
         <td><?=$value['note'];?></td>
         <td><?=$value['upload_time'];?></td>
         <td>
-            <div style="padding:0 0 0.5rem 0; display:inline-block;"><a href="del_file.php?id=<?=$value['id'];?>">刪除</a></div>
-            <div style="padding:0.5rem 0 0 0; display:inline-block;"><a href="update_file.php?id=<?=$value['id'];?>">更新</a></div>
+            <div style="padding:0 0 0.5rem 0; display:inline-block;"><a href="confirm.php?id=<?=$value['id'];?>" style="text-shadow:none;">刪除</a></div>
+            <div style="padding:0.5rem 0 0 0; display:inline-block;"><a href="update_file.php?id=<?=$value['id'];?>" style="text-shadow:none;">更新</a></div>
         </td>
     </tr>
 
