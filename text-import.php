@@ -1,4 +1,5 @@
 <?php
+include_once "base.php";
 /****
  * 1.建立資料庫及資料表
  * 2.建立上傳檔案機制
@@ -22,7 +23,10 @@
 <body>
 <h1 class="header">文字檔案匯入練習</h1>
 <!---建立檔案上傳機制--->
-
+<form action="parse_file.php" method="post" enctype="multipart/form-data">
+    <input type="file" name="doc">
+    <input type="submit" value="匯入">
+</form>
 
 
 <!----讀出匯入完成的資料----->

@@ -42,7 +42,13 @@ include_once "base.php";
             color: white;
             text-shadow: 0 0 4px #333;
         }
-            
+        .layout{
+            display: inline-block;
+        }
+        a{
+            border: 1px solid #666;
+            border-radius: 5px;
+        }
     </style>
 </head>
 <body>
@@ -54,11 +60,15 @@ include_once "base.php";
     <br>
     說明:<input type="text" name="note" placeholder="註解於此"><br>
     <br>
-    相簿:<select name="album">
-            <option value="1">美食</option>        
-            <option value="2">旅遊</option>
-            <option value="3">寵物</option>
+    
+    <div class="layout">相簿歸類:
+        <select name="album">
+                <option value="1">美食</option>        
+                <option value="2">旅遊</option>
+                <option value="3">寵物</option>
         </select>
+        <div><a href="album.php">相簿連結</a></div>
+    </div>
     <br>
     <input type="submit" value="送出">
 </form>
