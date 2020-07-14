@@ -19,13 +19,24 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>文字檔案匯入</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        body{
+            margin:0;
+            box-sizing: border-box;
+            padding: 10px;
+        }
+    </style>
 </head>
 <body>
 <h1 class="header">圖形處理練習</h1>
 <!---建立檔案上傳機制--->
+<form action="graphic.php" method="post" enctype="multipart/form-data">
+    <input type="file" name="pic"><br><br>
+    <button type="submit" name="">上傳</button><br><br>
 
+</form>
 
-
+<a href="album.php">查看相簿</a>
 <!----縮放圖形----->
 
 
