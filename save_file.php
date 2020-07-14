@@ -33,7 +33,8 @@ if($_FILES['pp']['error']==0){            //此為第二種判斷方式。
     'filename'=>$name,
     'type'=>$_FILES['pp']['type'],
     'note'=>$_POST['note'],
-    'path'=>"img/".$name
+    'path'=>"img/".$name,
+    'album'=>$_POST['album']
   ];
 
   save("file_info",$data);

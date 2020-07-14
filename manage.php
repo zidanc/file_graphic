@@ -50,9 +50,15 @@ include_once "base.php";
 <!----建立上傳檔案表單及相關的檔案資訊存入資料表機制----->
 
 <form action="save_file.php" method="post" enctype="multipart/form-data">
-    <input type="file" name="pp" id=""><br>
+    檔案:<input type="file" name="pp" id=""><br>
     <br>
-    <input type="text" name="note" placeholder="註解於此"><br>
+    說明:<input type="text" name="note" placeholder="註解於此"><br>
+    <br>
+    相簿:<select name="album">
+            <option value="1">美食</option>        
+            <option value="2">旅遊</option>
+            <option value="3">寵物</option>
+        </select>
     <br>
     <input type="submit" value="送出">
 </form>
@@ -66,6 +72,7 @@ include_once "base.php";
         <th>檔名</th>
         <th>路徑</th>
         <th>類別</th>
+        <th>相簿</th>
         <th>說明</th>
         <th>上傳時間</th>
         <th>操作</th>
@@ -79,6 +86,7 @@ foreach ($all as $key => $value){
         <td><?=$value['filename'];?></td>
         <td><?=$value['path'];?></td>
         <td><?=$value['type'];?></td>
+        <td><?=$value['album'];?></td>
         <td><?=$value['note'];?></td>
         <td><?=$value['upload_time'];?></td>
         <td>

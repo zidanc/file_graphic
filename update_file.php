@@ -42,6 +42,7 @@ if(!empty($_POST['submitname'])){
   $source['filename']=$name;
   $source['type']=$_FILES['ww']['type'];
   $source['path']="img/".$name;
+  $source['album']=$_POST['album'];
   $source['note']=$_POST['note'];
   
   
@@ -60,6 +61,12 @@ if(!empty($_POST['submitname'])){
 <form action="update_file.php" method="post" enctype="multipart/form-data">
     <input type="file" name="ww"><br>   
     <!-- id="" javascript才會用到 -->
+    <br>
+    <select name="album">
+            <option value="1">美食</option>        
+            <option value="2">旅遊</option>
+            <option value="3">寵物</option>
+    </select>
     <br>
     <input type="text" name="note" value="<?=$row['note'];?>"><br>
     <br>
