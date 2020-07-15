@@ -68,6 +68,7 @@ include_once "base.php";
                 <option value="3">寵物</option>
         </select>
         <div><a href="album.php">相簿連結</a></div>
+        <div><a href="image.php">圖形處理</a></div>
     </div>
     <br>
     <input type="submit" value="送出">
